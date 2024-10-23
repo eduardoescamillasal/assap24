@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/assap24/static/css/main.b45beda6.css",
-    "main.js": "/assap24/static/js/main.968a733d.js",
+    "main.js": "/assap24/static/js/main.319f0a7a.js",
     "reactPlayerYouTube.js": "/assap24/static/js/reactPlayerYouTube.56bd8662.chunk.js",
     "reactPlayerSoundCloud.js": "/assap24/static/js/reactPlayerSoundCloud.6adfd4a0.chunk.js",
     "reactPlayerVimeo.js": "/assap24/static/js/reactPlayerVimeo.f28538d5.chunk.js",
@@ -33,7 +33,7 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/assap24/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
     "index.html": "/assap24/index.html",
     "main.b45beda6.css.map": "/assap24/static/css/main.b45beda6.css.map",
-    "main.968a733d.js.map": "/assap24/static/js/main.968a733d.js.map",
+    "main.319f0a7a.js.map": "/assap24/static/js/main.319f0a7a.js.map",
     "reactPlayerYouTube.56bd8662.chunk.js.map": "/assap24/static/js/reactPlayerYouTube.56bd8662.chunk.js.map",
     "reactPlayerSoundCloud.6adfd4a0.chunk.js.map": "/assap24/static/js/reactPlayerSoundCloud.6adfd4a0.chunk.js.map",
     "reactPlayerVimeo.f28538d5.chunk.js.map": "/assap24/static/js/reactPlayerVimeo.f28538d5.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.b45beda6.css",
-    "static/js/main.968a733d.js"
+    "static/js/main.319f0a7a.js"
   ]
 }
