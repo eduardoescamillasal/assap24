@@ -1,6 +1,4 @@
-// components/DocumentsList.js
 
-// Either as a default export:
 const DocumentsList = ({documents}) => {
   return (
     <ul>

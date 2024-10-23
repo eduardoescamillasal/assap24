@@ -1,6 +1,6 @@
 import * as msal from "@azure/msal-browser";
 
-// MSAL configuration
+
 const msalConfig = {
   auth: {
     clientId: "YOUR_CLIENT_ID",
@@ -9,19 +9,18 @@ const msalConfig = {
   },
 };
 
-// Create MSAL instance
+
 const msalInstance = new msal.PublicClientApplication(msalConfig);
 
-// Initialize MSAL and ensure that it's awaited before making any API calls
 export const initializeMsal = async () => {
-  await msalInstance.initialize(); // Make sure MSAL is initialized before use
+  await msalInstance.initialize();
 };
 
 // Login function
 export const login = async () => {
-  await initializeMsal(); // Ensure initialization
+  await initializeMsal(); 
   const loginRequest = {
-    scopes: ["Sites.Read.All"], // Add any required scopes
+    scopes: ["Sites.Read.All"], 
   };
 
   try {

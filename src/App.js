@@ -2,19 +2,19 @@ import React, {useState, useEffect} from "react";
 import {login} from "./services/authProvider";
 import {setupSP, getDocuments} from "./services/spService";
 import {Sidebar, Menu, MenuItem, SubMenu, sidebarClasses} from "react-pro-sidebar";
-import "@fontsource/roboto"; // Ensure this package is installed
-import {FaQuestionCircle, FaCalendarAlt, FaBuilding} from "react-icons/fa"; // Ensure this package is installed
-import logo from "./assets/avantlogo.png"; // Import your company logo
+import "@fontsource/roboto";
+import {FaQuestionCircle, FaCalendarAlt, FaBuilding} from "react-icons/fa"; 
+import logo from "./assets/avantlogo.png"; 
 
-// Define a theme object to manage colors and fonts
+
 const theme = {
   colors: {
-    primaryStart: "#1e272e", // Gradient start color
-    primaryEnd: "#485460", // Gradient end color
-    secondary: "#485460", // Hover and active states
-    background: "#f1f2f6", // Main content background
-    text: "#ffffff", // Text color on dark backgrounds
-    heading: "#1e272e", // Heading color in main content
+    primaryStart: "#1e272e", 
+    primaryEnd: "#485460", 
+    secondary: "#485460", 
+    background: "#f1f2f6", 
+    text: "#ffffff", 
+    heading: "#1e272e", 
     cardBackground: "#ffffff",
   },
   fonts: {
@@ -22,7 +22,6 @@ const theme = {
   },
 };
 
-// Sample data for user manuals and videos
 const departmentContent = {
   FICO: {
     videoUrl: "https://www.example.com/videos/fico.mp4",
@@ -56,7 +55,7 @@ const departmentContent = {
 
 function App() {
   const [documents, setDocuments] = useState([]);
-  const [selectedDepartment, setSelectedDepartment] = useState(null); // State for selected department
+  const [selectedDepartment, setSelectedDepartment] = useState(null); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -78,7 +77,7 @@ function App() {
     <div
       style={{
         display: "flex",
-        flexDirection: "column", // Changed to column to accommodate header
+        flexDirection: "column", 
         height: "100vh",
         fontFamily: theme.fonts.primary,
       }}>
@@ -95,12 +94,11 @@ function App() {
         <h1 style={{margin: 0}}>Avant Santé | SAP Training</h1>
       </header>
 
-      {/* Main Content */}
+    
       <div style={{display: "flex", flex: 1}}>
         <Sidebar
           rootStyles={{
             [`.${sidebarClasses.container}`]: {
-              // Apply gradient background
               background: `linear-gradient(to bottom, ${theme.colors.primaryStart}, ${theme.colors.primaryEnd})`,
               color: theme.colors.text,
               width: "250px",
@@ -112,7 +110,7 @@ function App() {
                 color: theme.colors.text,
                 backgroundColor: "rgba(0,0,0,0.2)",
                 transition: "background-color 0.3s ease",
-                fontWeight: "bold", // Make the text bold
+                fontWeight: "bold", 
                 "&:hover": {
                   backgroundColor: theme.colors.secondary,
                 },
@@ -124,7 +122,7 @@ function App() {
                 color: theme.colors.text,
               },
               label: {
-                fontWeight: "bold", // Ensure submenu labels are bold
+                fontWeight: "bold", 
               },
             }}>
             <SubMenu label='Departments' icon={<FaBuilding />}>
@@ -135,7 +133,7 @@ function App() {
               ))}
             </SubMenu>
             <MenuItem icon={<FaQuestionCircle />}> FAQ </MenuItem>
-            {/* <MenuItem icon={<FaCalendarAlt />}> Calendar </MenuItem> */}
+      
           </Menu>
         </Sidebar>
         <main
@@ -154,7 +152,7 @@ function App() {
                   flexDirection: "column",
                   gap: "20px",
                 }}>
-                {/* Video Section */}
+            
                 <div>
                   <h3>Training Video</h3>
                   <video controls style={{width: "100%", maxHeight: "400px"}}>
@@ -163,11 +161,10 @@ function App() {
                   </video>
                 </div>
 
-                {/* User Manual Section */}
+             
                 <div>
                   <h3>User Manual</h3>
                   <p>{departmentContent[selectedDepartment].manual}</p>
-                  {/* Alternatively, you can display PDF or rich text content */}
                 </div>
               </div>
             </>
