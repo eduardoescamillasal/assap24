@@ -14,17 +14,49 @@ const theme = {
     secondary: "#485460", // Hover and active states
     background: "#f1f2f6", // Main content background
     text: "#ffffff", // Text color on dark backgrounds
-    textLight: "#1e272e", // Text color on light backgrounds
     heading: "#1e272e", // Heading color in main content
-    cardBackground: "#ffffff", // Background for cards/list items
+    cardBackground: "#ffffff",
   },
   fonts: {
-    primary: "Inter, sans-serif",
+    primary: "Roboto, sans-serif",
+  },
+};
+
+// Sample data for user manuals and videos
+const departmentContent = {
+  FICO: {
+    videoUrl: "https://www.example.com/videos/fico.mp4",
+    manual: "This is the user manual for FICO department.",
+  },
+  HCM: {
+    videoUrl: "https://www.example.com/videos/hcm.mp4",
+    manual: "This is the user manual for HCM department.",
+  },
+  MM: {
+    videoUrl: "https://www.example.com/videos/mm.mp4",
+    manual: "This is the user manual for MM department.",
+  },
+  PM: {
+    videoUrl: "https://www.example.com/videos/pm.mp4",
+    manual: "This is the user manual for PM department.",
+  },
+  PS: {
+    videoUrl: "https://www.example.com/videos/ps.mp4",
+    manual: "This is the user manual for PS department.",
+  },
+  QM: {
+    videoUrl: "https://www.example.com/videos/qm.mp4",
+    manual: "This is the user manual for QM department.",
+  },
+  SD: {
+    videoUrl: "https://www.example.com/videos/sd.mp4",
+    manual: "This is the user manual for SD department.",
   },
 };
 
 function App() {
   const [documents, setDocuments] = useState([]);
+  const [selectedDepartment, setSelectedDepartment] = useState(null); // State for selected department
 
   useEffect(() => {
     const fetchData = async () => {
@@ -78,7 +110,7 @@ function App() {
             menuItemStyles={{
               button: {
                 color: theme.colors.text,
-                backgroundColor: "rgba(0,0,0,0.35)",
+                backgroundColor: "rgba(0,0,0,0.2)",
                 transition: "background-color 0.3s ease",
                 fontWeight: "bold", // Make the text bold
                 "&:hover": {
@@ -96,13 +128,11 @@ function App() {
               },
             }}>
             <SubMenu label='Departments' icon={<FaBuilding />}>
-              <MenuItem> FICO </MenuItem>
-              <MenuItem> HCM </MenuItem>
-              <MenuItem> MM </MenuItem>
-              <MenuItem> PM </MenuItem>
-              <MenuItem> PS </MenuItem>
-              <MenuItem> QM </MenuItem>
-              <MenuItem> SD </MenuItem>
+              {Object.keys(departmentContent).map((dept) => (
+                <MenuItem key={dept} onClick={() => setSelectedDepartment(dept)}>
+                  {dept}
+                </MenuItem>
+              ))}
             </SubMenu>
             <MenuItem icon={<FaQuestionCircle />}> FAQ </MenuItem>
             {/* <MenuItem icon={<FaCalendarAlt />}> Calendar </MenuItem> */}
@@ -113,23 +143,40 @@ function App() {
             flex: 1,
             padding: "20px",
             backgroundColor: theme.colors.background,
+            overflowY: "auto",
           }}>
-          <h2 style={{color: theme.colors.heading}}>SharePoint Documents</h2>
-          <ul style={{listStyleType: "none", padding: 0}}>
-            {documents.map((doc) => (
-              <li
-                key={doc.Id}
+          {selectedDepartment ? (
+            <>
+              <h2 style={{color: theme.colors.heading}}>{selectedDepartment} Department</h2>
+              <div
                 style={{
-                  backgroundColor: theme.colors.cardBackground,
-                  margin: "10px 0",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
                 }}>
-                {doc.Title}
-              </li>
-            ))}
-          </ul>
+                {/* Video Section */}
+                <div>
+                  <h3>Training Video</h3>
+                  <video controls style={{width: "100%", maxHeight: "400px"}}>
+                    <source src={departmentContent[selectedDepartment].videoUrl} type='video/mp4' />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                {/* User Manual Section */}
+                <div>
+                  <h3>User Manual</h3>
+                  <p>{departmentContent[selectedDepartment].manual}</p>
+                  {/* Alternatively, you can display PDF or rich text content */}
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 style={{color: theme.colors.heading}}>Welcome to the Company Portal</h2>
+              <p>Select a department from the sidebar to view content.</p>
+            </>
+          )}
         </main>
       </div>
     </div>
