@@ -27,13 +27,14 @@ const departmentContent = {
     videos: [
       {
         title: "Introduction to FICO",
-        videoUrl: "https://www.example.com/videos/fico1.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/fico1.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=ER4xnUGztaE/videos/fico1.mp4",
+        thumbnailUrl: "https://img.youtube.com/vi/ER4xnUGztaE/hqdefault.jpg",
       },
       {
         title: "FICO Advanced Techniques",
-        videoUrl: "https://www.example.com/videos/fico2.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/fico2.jpg",
+        videoUrl:
+          "https://www.youtube.com/watch?v=2_8c4zgScQs&list=PLFZrWCcy6oceSnP42lZiBMxjVRKRyTg4M",
+        thumbnailUrl: "https://img.youtube.com/vi/2_8c4zgScQs/hqdefault.jpg",
       },
     ],
     manual: "This is the user manual for the FICO department.",
@@ -42,13 +43,13 @@ const departmentContent = {
     videos: [
       {
         title: "Introduction to HCM",
-        videoUrl: "https://www.youtube.com/watch?v=wKci3i0HC8I",
-        thumbnailUrl: "https://img.youtube.com/vi/wKci3i0HC8I/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=FPj8HOc59WU",
+        thumbnailUrl: "https://img.youtube.com/vi/FPj8HOc59WU/hqdefault.jpg",
       },
       {
         title: "HCM Best Practices",
-        videoUrl: "https://www.youtube.com/watch?v=qyu1sJR2QHg",
-        thumbnailUrl: "https://img.youtube.com/vi/qyu1sJR2QHg/hqdefault.jpg"
+        videoUrl: "https://www.youtube.com/watch?v=h-W4DB_B7zs",
+        thumbnailUrl: "https://img.youtube.com/vi/h-W4DB_B7zs/hqdefault.jpg",
       },
     ],
     manual: "This is the user manual for the HCM department.",
@@ -57,13 +58,14 @@ const departmentContent = {
     videos: [
       {
         title: "Introduction to MM",
-        videoUrl: "https://www.example.com/videos/mm1.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/mm1.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=jkxtXXWqMqo",
+        thumbnailUrl: "https://img.youtube.com/vi/jkxtXXWqMqo/hqdefault.jpg",
       },
       {
         title: "MM Workflow Management",
-        videoUrl: "https://www.example.com/videos/mm2.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/mm2.jpg",
+        videoUrl:
+          "https://www.youtube.com/watch?v=p93SN2eAPH8&list=PL5LE1pk3CSPpExvyO2gFaaaWE9S8-qcYl",
+        thumbnailUrl: "https://img.youtube.com/vi/p93SN2eAPH8/hqdefault.jpg",
       },
     ],
     manual: "This is the user manual for the MM department.",
@@ -72,13 +74,13 @@ const departmentContent = {
     videos: [
       {
         title: "Introduction to PM",
-        videoUrl: "https://www.example.com/videos/pm1.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/pm1.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=XshztGYetHE",
+        thumbnailUrl: "https://img.youtube.com/vi/XshztGYetHE/hqdefault.jpg",
       },
       {
         title: "PM Project Planning",
-        videoUrl: "https://www.example.com/videos/pm2.mp4",
-        thumbnailUrl: "https://www.example.com/thumbnails/pm2.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=tAfCHycGa0E",
+        thumbnailUrl: "https://img.youtube.com/vi/tAfCHycGa0E/hqdefault.jpg",
       },
     ],
     manual: "This is the user manual for the PM department.",
