@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/assap24/static/css/main.b45beda6.css",
-    "main.js": "/assap24/static/js/main.af5ed7a2.js",
+    "main.js": "/assap24/static/js/main.4ddbbeeb.js",
     "static/media/avantlogo.png": "/assap24/static/media/avantlogo.fb1baefcb75c0c943ee9.png",
     "static/media/roboto-latin-400-normal.woff2": "/assap24/static/media/roboto-latin-400-normal.297d48e1b5a10c0831a9.woff2",
     "static/media/roboto-latin-400-normal.woff": "/assap24/static/media/roboto-latin-400-normal.047a7839f69b209db815.woff",
@@ -19,10 +19,10 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/assap24/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
     "index.html": "/assap24/index.html",
     "main.b45beda6.css.map": "/assap24/static/css/main.b45beda6.css.map",
-    "main.af5ed7a2.js.map": "/assap24/static/js/main.af5ed7a2.js.map"
+    "main.4ddbbeeb.js.map": "/assap24/static/js/main.4ddbbeeb.js.map"
   },
   "entrypoints": [
     "static/css/main.b45beda6.css",
-    "static/js/main.af5ed7a2.js"
+    "static/js/main.4ddbbeeb.js"
   ]
 }
